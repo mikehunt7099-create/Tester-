@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORION DEV CORE - AI Amplifies. I Create.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-dark: #05070a; /* Deeper Black-Navy */
+            --bg-card: #0d121f;
+            --accent-gold: #D4AF37;
+            --gold-glow: #FBEC5D;
+            --accent-blue: #00d4ff;
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            /* NEW GOLD GRADIENT */
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: 'Bodoni Moda', serif; letter-spacing: 2px; }
+
+        /* FLOATING GOLD ORBS */
+        .orb {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            z-index: 0;
+            filter: blur(80px);
+            animation: drift 20s infinite alternate;
+        }
+        .orb-1 { top: -100px; right: -100px; }
+        .orb-2 { bottom: -100px; left: -100px; animation-delay: -5s; }
+
+        @keyframes drift {
+            from { transform: translate(0, 0); }
+            to { transform: translate(100px, 50px); }
+        }
+
+        /* INVERTED ART SECTION (The "Gap" Filler) */
+        .art-feature {
+            padding: 100px 5%;
+            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.05), transparent);
+            text-align: center;
+        }
+
+        .inverted-frame {
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid var(--accent-gold);
+            padding: 10px;
+            position: relative;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .art-invert {
+            width: 100%;
+            height: 450px;
+            background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80') center; /* Temporary texture */
+            background-size: cover;
+            filter: invert(1) hue-rotate(180deg) contrast(1.2); /* The "Bob Ross Invert" Look */
+            opacity: 0.8;
+        }
+
+        /* FLOATING GOLD BUTTONS */
+        .btn {
+            padding: 1.1rem 3rem;
+            border-radius: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: #000;
+            box-shadow: 0 10px 20px rgba(170, 119, 28, 0.4);
+            border: none;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.6);
+        }
+
+        nav {
+            background: rgba(5, 7, 10, 0.9);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .logo {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero .subtitle { color: var(--accent-gold); }
+
+        /* CHAT BOX UPGRADE */
+        .chat-container {
+            border: 1px solid var(--accent-gold);
+            background: rgba(13, 18, 31, 0.8);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <nav>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;">
+            <div class="logo" style="font-family: 'Bodoni Moda'; font-size: 1.8rem;">ORION DEV CORE</div>
+            <div class="nav-links">
+                <a href="#contact" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.8rem;">Get Access</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container">
+            <h1>ORION DEV CORE</h1>
+            <p class="subtitle" style="font-size: 2.2rem; font-style: italic;">AI Amplifies. I Create.</p>
+            <div class="cta-buttons" style="margin-top: 40px;">
+                <a href="#live-demo" class="btn btn-gold">Enter The Core</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="art-feature">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">The Artistic Vision</h2>
+            <p style="margin-bottom: 40px; color: var(--text-secondary);">Where logic meets raw human creativity.</p>
+            <div class="inverted-frame">
+                <div class="art-invert"></div>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+                    <h2 style="font-size: 3rem; color: #fff; text-shadow: 0 0 20px #000;">ORION DEV CORE</h2>
+                    <p style="color: var(--accent-gold); letter-spacing: 5px; font-weight: 700;">EST. 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="live-demo" style="padding: 100px 5%;">
+        <div class="container">
+            <div class="chat-container" style="border-radius: 4px; padding: 50px; text-align: center;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">Orion AI Agent</h3>
+                <p style="color: var(--text-secondary);">Connecting to Secure Core...</p>
+                <div style="margin-top: 30px; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 30px;">
+                    [ Insert Your Live Chat Widget Here ]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="padding: 50px 5%; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1);">
+        <p style="color: var(--accent-gold);">© 2025 ORION DEV CORE</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
