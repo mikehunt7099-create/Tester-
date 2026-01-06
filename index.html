@@ -3,193 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORION DEV CORE - AI Amplifies. I Create.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Orion Dev Core | Master Brochure</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
+        /* ORION BRANDING CORE */
         :root {
-            --bg-dark: #05070a; /* Deeper Black-Navy */
-            --bg-card: #0d121f;
-            --accent-gold: #D4AF37;
-            --gold-glow: #FBEC5D;
-            --accent-blue: #00d4ff;
-            --text-primary: #ffffff;
-            --text-secondary: #a0aec0;
-            /* NEW GOLD GRADIENT */
-            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --gold: #D4AF37;
+            --black: #050505;
+            --bolt-blue: #00BFFF;
+            --legal-green: #1A3025; /* Bottle Green Velvet */
+            --white: #F4F4F4;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            overflow-x: hidden;
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Baskerville', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact;
         }
 
-        h1, h2, h3 { font-family: 'Bodoni Moda', serif; letter-spacing: 2px; }
-
-        /* FLOATING GOLD ORBS */
-        .orb {
-            position: fixed;
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            z-index: 0;
-            filter: blur(80px);
-            animation: drift 20s infinite alternate;
-        }
-        .orb-1 { top: -100px; right: -100px; }
-        .orb-2 { bottom: -100px; left: -100px; animation-delay: -5s; }
-
-        @keyframes drift {
-            from { transform: translate(0, 0); }
-            to { transform: translate(100px, 50px); }
-        }
-
-        /* INVERTED ART SECTION (The "Gap" Filler) */
-        .art-feature {
-            padding: 100px 5%;
-            background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.05), transparent);
-            text-align: center;
-        }
-
-        .inverted-frame {
-            max-width: 1000px;
-            margin: 0 auto;
-            border: 1px solid var(--accent-gold);
-            padding: 10px;
-            position: relative;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
-        }
-
-        .art-invert {
-            width: 100%;
-            height: 450px;
-            background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80') center; /* Temporary texture */
-            background-size: cover;
-            filter: invert(1) hue-rotate(180deg) contrast(1.2); /* The "Bob Ross Invert" Look */
-            opacity: 0.8;
-        }
-
-        /* FLOATING GOLD BUTTONS */
-        .btn {
-            padding: 1.1rem 3rem;
-            border-radius: 2px;
+        /* TYPOGRAPHY */
+        h1, h2, h3 {
+            font-weight: normal;
             text-transform: uppercase;
-            font-weight: 700;
             letter-spacing: 2px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
+            margin-bottom: 10px;
         }
 
-        .btn-gold {
-            background: var(--gold-gradient);
-            color: #000;
-            box-shadow: 0 10px 20px rgba(170, 119, 28, 0.4);
-            border: none;
+        h1 { font-size: 32px; color: var(--gold); text-align: center; margin-top: 0; }
+        h2 { font-size: 22px; color: var(--bolt-blue); border-bottom: 1px solid var(--gold); padding-bottom: 5px; display: inline-block; }
+        h3 { font-size: 18px; color: var(--gold); margin-top: 20px; }
+        p, li { font-size: 14px; color: #ccc; }
+        strong { color: white; }
+
+        /* CONTAINERS */
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            position: relative;
+            overflow: hidden;
         }
 
-        .btn-gold:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.6);
+        /* LOGO PLACEHOLDERS (Replace with <img src="your-logo.png">) */
+        .logo-box {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            border: 2px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 0 15px var(--gold);
+        }
+        
+        .blue-bolt {
+            color: var(--bolt-blue);
+            font-size: 60px;
+            text-shadow: 0 0 10px var(--bolt-blue);
+            animation: pulse 2s infinite;
         }
 
-        nav {
-            background: rgba(5, 7, 10, 0.9);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        /* SECTIONS */
+        .section-legal {
+            background-color: var(--legal-green);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            margin: 20px 0;
         }
 
-        .logo {
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
+        .section-hotel {
+            background: linear-gradient(180deg, #111 0%, #000 100%);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            margin: 20px 0;
         }
 
-        .hero h1 {
-            font-size: 5rem;
-            text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .pricing-table td {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            color: #ddd;
+        }
+        .price-tag {
+            color: var(--gold);
+            font-weight: bold;
+            text-align: right;
         }
 
-        .hero .subtitle { color: var(--accent-gold); }
-
-        /* CHAT BOX UPGRADE */
-        .chat-container {
-            border: 1px solid var(--accent-gold);
-            background: rgba(13, 18, 31, 0.8);
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+        /* PRINT SETTINGS */
+        @media print {
+            body { background-color: #000; }
+            .page { border: none; box-shadow: none; margin: 0; page-break-after: always; width: 100%; }
+            .no-print { display: none; }
         }
+
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; text-shadow: 0 0 20px var(--bolt-blue); }
+            100% { opacity: 0.8; }
+        }
+        
+        .center-text { text-align: center; }
+        .tagline { color: #888; font-size: 12px; letter-spacing: 3px; text-align: center; margin-top: -10px; margin-bottom: 30px; }
 
     </style>
 </head>
 <body>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
 
-    <nav>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 5%;">
-            <div class="logo" style="font-family: 'Bodoni Moda'; font-size: 1.8rem;">ORION DEV CORE</div>
-            <div class="nav-links">
-                <a href="#contact" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.8rem;">Get Access</a>
-            </div>
+    <div class="page">
+        <div class="logo-box">
+            <div class="blue-bolt">⚡</div> 
         </div>
-    </nav>
-
-    <section class="hero" style="height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;">
-        <div class="container">
-            <h1>ORION DEV CORE</h1>
-            <p class="subtitle" style="font-size: 2.2rem; font-style: italic;">AI Amplifies. I Create.</p>
-            <div class="cta-buttons" style="margin-top: 40px;">
-                <a href="#live-demo" class="btn btn-gold">Enter The Core</a>
-            </div>
+        <h1>ORION DEV CORE</h1>
+        <p class="tagline">AI AMPLIFIES. I CREATE.</p>
+        
+        <div style="text-align: center; margin-top: 50px;">
+            <p style="font-size: 18px; color: var(--white);">The Future of South African Automation.</p>
+            <p style="color: var(--gold);">Legal &nbsp;|&nbsp; Hospitality &nbsp;|&nbsp; Retail</p>
+            <br>
+            <hr style="border-color: #333; width: 50%;">
+            <br>
+            <p><strong>2026 PRODUCT SUITE</strong></p>
+            <p style="font-size: 12px;">Prepared by Graham Schubach</p>
         </div>
-    </section>
+    </div>
 
-    <section class="art-feature">
-        <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">The Artistic Vision</h2>
-            <p style="margin-bottom: 40px; color: var(--text-secondary);">Where logic meets raw human creativity.</p>
-            <div class="inverted-frame">
-                <div class="art-invert"></div>
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
-                    <h2 style="font-size: 3rem; color: #fff; text-shadow: 0 0 20px #000;">ORION DEV CORE</h2>
-                    <p style="color: var(--accent-gold); letter-spacing: 5px; font-weight: 700;">EST. 2025</p>
-                </div>
+    <div class="page">
+        <h2>THE FOUNDER’S LOG</h2>
+        <p><em>"Excellence has no physical boundaries."</em></p>
+        <p>In a world of high-powered workstations, Orion Dev Core was born from a different kind of strength. Every line of code for our flagship software was built entirely on an <strong>Honor X6b mobile phone</strong> in collaboration with <strong>Gemini AI</strong>.</p>
+        <p>From a makeshift workspace in KwaZulu-Natal, we have built systems that rival international software houses. We do not just write code; we build resilience.</p>
+
+        <h3>THE ORION SIGNATURE <span style="color:var(--bolt-blue)">⚡</span></h3>
+        <p>Our symbol is the <strong>Blue Bolt</strong>. It represents the spark of intelligence striking the circuit board of industry. It stands for speed, power, and the sudden illumination of a brilliant idea in a dark room.</p>
+    </div>
+
+    <div class="page">
+        <div class="section-legal">
+            <div style="text-align: center; margin-bottom: 20px;">
+                <span style="font-size: 40px;">⚖️⚡</span>
+                <h1 style="color: var(--white); font-size: 24px; margin-top: 10px;">ORION LEGAL SUITE</h1>
+                <p style="color: var(--gold); font-size: 12px;">LEGAL AUTOMATION IN 11 OFFICIAL LANGUAGES</p>
             </div>
-        </div>
-    </section>
 
-    <section id="live-demo" style="padding: 100px 5%;">
-        <div class="container">
-            <div class="chat-container" style="border-radius: 4px; padding: 50px; text-align: center;">
-                <h3 style="font-size: 2rem; margin-bottom: 20px;">Orion AI Agent</h3>
-                <p style="color: var(--text-secondary);">Connecting to Secure Core...</p>
-                <div style="margin-top: 30px; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 30px;">
-                    [ Insert Your Live Chat Widget Here ]
-                </div>
+            <p>The first South African legal web application capable of operating fluently in <strong>all 11 Official Languages</strong>. Orion Legal Suite is not just a chatbot; it is a full ERP system designed to protect your firm from risk.</p>
+
+            <h3>KEY FEATURES</h3>
+            <ul>
+                <li><strong>Mintaka AI Engine:</strong> Powered by Gemini 1.5 Flash. Speak or type in Zulu, Xhosa, Afrikaans, etc.</li>
+                <li><strong>Prescription Safety Net:</strong> Tracks RAF (3 Years) and Civil claim expiry dates.</li>
+                <li><strong>Document Vault:</strong> Instant NDAs, SLAs, Wills via Google Docs.</li>
+                <li><strong>Yoco Integration:</strong> Secure consultation payments.</li>
+            </ul>
+
+            <h3>INVESTMENT</h3>
+            <table class="pricing-table">
+                <tr>
+                    <td><strong>Setup & Integration</strong><br><small>Custom Branding, Google Workspace, Training</small></td>
+                    <td class="price-tag">R 7,869</td>
+                </tr>
+                <tr>
+                    <td><strong>Monthly Retainer</strong><br><small>24/7 AI Access, Maintenance</small></td>
+                    <td class="price-tag">R 1,369 pm</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="section-hotel">
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <h2 style="border:none; margin:0;">ORION HOTEL SUITE</h2>
+                <span style="font-size: 30px;">🛎️⚡</span>
             </div>
+            <p><strong>"The 24/7 Digital Concierge."</strong> Transform guest experience with an AI that never sleeps. Handles check-ins, room service, and local tips.</p>
+            
+            <table class="pricing-table">
+                <tr>
+                    <td>Small (B&B / &lt;30 Rooms)</td>
+                    <td class="price-tag">R 499 pm</td>
+                </tr>
+                <tr>
+                    <td>Medium (30-100 Rooms)</td>
+                    <td class="price-tag">R 699 pm</td>
+                </tr>
+                <tr>
+                    <td>Large (100+ Rooms)</td>
+                    <td class="price-tag">R 899 pm</td>
+                </tr>
+                <tr>
+                    <td style="color: var(--bolt-blue);">+ Full 11-Language Pack</td>
+                    <td class="price-tag">R 400 pm</td>
+                </tr>
+            </table>
+            <p style="text-align: right; font-size: 12px; margin-top: 5px;">*Setup Fee: R 7,869</p>
         </div>
-    </section>
 
-    <footer style="padding: 50px 5%; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1);">
-        <p style="color: var(--accent-gold);">© 2025 ORION DEV CORE</p>
-    </footer>
+        <div style="padding: 20px; border: 1px solid #333; border-radius: 8px;">
+            <div style="display:flex; justify-content: space-between; align-items: center;">
+                <h2 style="border:none; margin:0;">ORION mPOS</h2>
+                <span style="font-size: 30px;">📱⚡</span>
+            </div>
+            <p>Turn any smartphone into a powerful checkout terminal. Digital signatures, smart receipting, and inventory tracking.</p>
+            <p><strong>Setup:</strong> R 3,499 &nbsp;|&nbsp; <strong>Monthly:</strong> R 349 pm</p>
+        </div>
+    </div>
 
-    <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+    <div class="page">
+        <h2>THE SISANDA PROJECT</h2>
+        <p style="color: var(--gold);">AI Amplifies. Compassion Creates.</p>
+        <p>Inspired by Sisanda, an 11-year-old boy in Grade 4 from Felekisi, Durban. For every <strong>R 1,500</strong> of revenue generated, Orion Dev Core contributes <strong>R 100</strong> toward R&D for AI-assisted learning tools designed for children with autism.</p>
+
+        <br><hr style="border-color: #333;"><br>
+
+        <div class="center-text">
+            <div class="blue-bolt" style="font-size: 40px; margin-bottom: 20px;">⚡</div>
+            <h1 style="font-size: 24px;">READY TO DEPLOY?</h1>
+            
+            <p style="font-size: 16px; margin-bottom: 5px;"><strong>Graham Schubach</strong></p>
+            <p style="margin-top: 0;">Founder & Lead Developer</p>
+            
+            <p style="color: var(--bolt-blue); font-size: 18px;">+27 72 497 1810</p>
+            <p>graham@oriondevcore.com<br>www.oriondevcore.com</p>
+            
+            <p style="font-size: 10px; margin-top: 30px; color: #555;">
+                Orion Dev Core is POPIA Compliant.<br>
+                Powered by Google Gemini | Payments by Yoco
+            </p>
+        </div>
+    </div>
+
 </body>
 </html>
+
